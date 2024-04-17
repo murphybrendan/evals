@@ -1,27 +1,30 @@
-[project]
+[tool.poetry]
 name = "evals"
+version = "0.0.1"
 description = "Evaluations for LLM capabilities"
-requires-python = ">=3.10"
-version="0.0.1"
-
-dependencies = [
-    "anthropic",
-    "datasets",
-    "python-dotenv",
-    "torch",
-    "transformers[accelerate]",
-    "wandb",
+authors = ["Brendan Murphy <brendan@murphybrendan.com>"]
+license = "MIT"
+packages = [
+    { include = "evals", from = "src" },
 ]
 
-[project.optional-dependencies]
-dev = [
-    "black",
-    "isort",
-    "jupyter",
-]
+[tool.poetry.dependencies]
+python = "^3.10"
+anthropic = "*"
+datasets = "*"
+python-dotenv = "*"
+torch = "*"
+transformers = {extras = ["accelerate"], version = "*"}
+wandb = "*"
 
-[tool.setuptools.packages.find]
-namespaces = false
+[tool.poetry.dev-dependencies]
+black = "*"
+isort = "*"
+jupyter = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.isort]
 profile = "black"
