@@ -1,0 +1,27 @@
+[project]
+name = "evals"
+description = "Evaluations for LLM capabilities"
+requires-python = ">=3.10"
+version="0.0.1"
+
+dependencies = [
+    "anthropic",
+    "datasets",
+    "python-dotenv",
+    "torch",
+    "transformers[accelerate]",
+    "wandb",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "jupyter",
+]
+
+[tool.setuptools.packages.find]
+namespaces = false
+
+[tool.isort]
+profile = "black"
