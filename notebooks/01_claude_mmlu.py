@@ -1,8 +1,8 @@
 # %%
 from tqdm import tqdm
-from evals.benchmarks import *
-from evals.models.claude3 import Claude3Model
-from evals import run_eval
+from llm_evals_viz.benchmarks import *
+from llm_evals_viz.models.claude3 import Claude3Model
+from llm_evals_viz import run_eval
 
 from datasets import load_dataset
 from dataclasses import asdict

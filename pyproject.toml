@@ -1,17 +1,18 @@
 [tool.poetry]
-name = "evals"
+name = "llm_evals_viz"
 version = "0.0.1"
 description = "Evaluations for LLM capabilities"
 authors = ["Brendan Murphy <brendan@murphybrendan.com>"]
 license = "MIT"
 packages = [
-    { include = "evals", from = "src" },
+    { include = "llm_evals_viz", from = "src" },
 ]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 anthropic = "*"
 datasets = "*"
+lm-eval = "*"
 python-dotenv = "*"
 torch = "*"
 transformers = {extras = ["accelerate"], version = "*"}
